@@ -144,4 +144,50 @@
 • Удостоверился в правильном нахождении файла prometheus.yaml в папке grafana/config
 ![image](https://github.com/user-attachments/assets/1e83056c-756c-448b-88c8-918e6268a262)
 
-• 
+• запускаем docker compose в фоновом режиме
+• переходим на сайт localhost:3000
+>Пользователь и Пароль GRAFANA: admin
+
+>Код графаны: 3000
+
+>Код прометеуса: http://prometheus:9090
+
+• в меню выбираем вкладку Dashboards и создаем Dashboard
+
+ >нажимаем кнопку +Добавить визуализацию, а затем «Настроить новый источник данных»
+ >выбираем Prometheus
+
+![image](https://github.com/user-attachments/assets/92792b69-ba77-4591-9543-87bb325f6d28)
+
+• Заполняем данные в открывшемся окне
+ 
+ • Пункт Connection
+  >http://prometheus:9090
+ 
+ • Пункт Authentication
+ 
+  >Базовая аутентификация
+  
+  >Пользователь: admin
+  
+  >Пароль: admin
+  
+  >Нажимаем на Save & test и должно показывать зелёную галочку
+  
+ • в меню выбираем вкладку Dashboards и создаем Dashboard
+
+   >жмем кнопку "Import dashboard"
+
+  ![image](https://github.com/user-attachments/assets/c60048cc-8fef-41d4-9060-8249017717b4)
+
+  >В пункт **Find and import dashboards for common applications at grafana.com/dashboards:** вписываем 1860
+
+  ![image](https://github.com/user-attachments/assets/a1afba2c-a53e-43d6-bde7-ed83ee48a53a)
+
+ • жмем кнопку Load
+
+  >Select Prometheus ждем кнопку "Import"
+
+В итоге открывается такой Dashboard для мониторинга загрузки ОС
+
+![image](https://github.com/user-attachments/assets/db864a79-27c3-4d8e-9069-e695d4743a2f)
