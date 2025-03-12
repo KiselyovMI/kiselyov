@@ -47,7 +47,7 @@
 
 9. >docker --version
 
-• Проверка установленной версии Docker Compose.
+• Проверка установленной версии Docker.
 
 ![image](https://github.com/user-attachments/assets/7cab30e6-ffd6-4237-9919-2c35ddf18f53)
 
@@ -94,7 +94,18 @@
 ![image](https://github.com/user-attachments/assets/4f4a25b2-54bd-43ab-87ea-e3bc2305513b)
 ![image](https://github.com/user-attachments/assets/f15de654-f593-4a8c-970d-46b10d3a6496)
 
->-d Он означал что мы вошли в "detached mode" (фоновый режим)
+19. • Открываем браузер и переходим по адресу localhost:3000
+>Вводим логин и пароль
+
+>Логин: admin
+>Пароль: admin
+
+20. • Попадаем на страницу Home
+![image](https://github.com/user-attachments/assets/891e2151-b6f0-4c0f-876c-494ba7952f53)
+
+
+• -d Он означал что мы вошли в "detached mode" (фоновый режим)
+
 ![image](https://github.com/user-attachments/assets/079c82ae-9e2f-4468-81b3-a54a0e5fa649)
 
 >sudo docker compose stop
@@ -105,7 +116,7 @@
  >Пояснение: Контейнеры остаются в состоянии "остановленных", и их можно снова запустить командой docker compose start.
  >Пример: Когда вам нужно временно остановить работу приложения, но сохранить состояние контейнеров для дальнейшего использования.
 
->sudo docker compose down
+• sudo docker compose down
 
 ![image](https://github.com/user-attachments/assets/13623d59-a119-4046-b06c-94ef296265b9)
 
@@ -113,7 +124,7 @@
 >Пояснение: Это более радикальная команда, чем stop. После выполнения этой команды все данные, хранящиеся в объёмах, будут удалены, если явно не указано их сохранение.
 >Пример: Когда вам нужно полностью очистить окружение и начать с чистого листа.
 
->sudo docker compose ps
+• sudo docker compose ps
 
 ![image](https://github.com/user-attachments/assets/abc1d2b2-2582-4f68-8d3d-b9ce5b07f827)
 
@@ -121,8 +132,16 @@
 >Пояснение: Команда выводит список контейнеров вместе с их состоянием (запущен/остановлен), портами, сетями и другими параметрами.
 >Пример: Используется для мониторинга текущего состояния контейнеров.
 
-Командой выполняем клонирование удаленного Git-репозитория с GitHub на компьютер
+• Командой выполняем клонирование удаленного Git-репозитория с GitHub на компьютер
 
 >git clone https://github.com/KiselyovMI/kiselyov
 
 ![image](https://github.com/user-attachments/assets/4361eb2d-9d8a-4ee6-8793-3f55a899a78e)
+
+• Перенёс prometheus.yaml в корневую папку Grafana 
+![image](https://github.com/user-attachments/assets/2a49256e-3994-44bc-9589-92341fdad4a6)
+
+• Удостоверился в правильном нахождении файла prometheus.yaml в папке grafana/config
+![image](https://github.com/user-attachments/assets/1e83056c-756c-448b-88c8-918e6268a262)
+
+• 
