@@ -191,3 +191,48 @@
 В итоге открывается такой Dashboard для мониторинга загрузки ОС
 
 ![image](https://github.com/user-attachments/assets/db864a79-27c3-4d8e-9069-e695d4743a2f)
+
+# Victoria
+
+• Вводим команду 
+
+>echo -e "# TYPE light_metric1 gauge\nlight_metric1 0" | curl --data-binary @- http://localhost:8428/api/v1/import/prometheus 
+
+которая, отправляет бинарные данные (например, метрики в формате Prometheus) на локальный сервер, который слушает на порту 8428.
+
+![image](https://github.com/user-attachments/assets/e5eb5987-1cee-4342-8575-84b465923970)
+
+• Переходим в браузере по ссылке http://localhost:8428/, открывается такое меню в нём нужно выбрать vmui
+
+![image](https://github.com/user-attachments/assets/aa0ab359-3045-4fb8-8845-9cf4c8a4d83a)
+
+• Вписываем light_metric1 и нажимаем Execute Query
+
+![image](https://github.com/user-attachments/assets/301dd558-54d7-4725-a989-5b73fe942389)
+![image](https://github.com/user-attachments/assets/5cc2a84c-b504-4b5b-962d-643a2479d6ba)
+
+• Переходим на http://localhost:3000 выбираем Dashboard и нажимаем New Dashboard, далее Add Visualization
+
+![image](https://github.com/user-attachments/assets/1fbe37c6-76bb-482a-a01d-cc1dcfc9f396)
+
+• Нажимаем Configure a new data source и выбираем Prometheus
+
+![image](https://github.com/user-attachments/assets/cf7e88d4-1420-47ba-b17f-4f7b43c6c1ae)
+
+• Вписываем:
+
+>Name: vik
+
+>Connection: http://victoriametrics:8428
+
+>Нажимаем Save & TestВписываем:
+
+![image](https://github.com/user-attachments/assets/953a1bea-bad6-437d-a4cb-60a01b169d85)
+
+• Вписываем light_metric1
+
+![image](https://github.com/user-attachments/assets/be166b29-8ae5-4424-9883-8aabdbf8d3d0)
+
+• Выходит панель с графиком, где есть активность light_metric1
+
+![image](https://github.com/user-attachments/assets/5142f70a-a712-4580-95ce-3c75d82e39db)
